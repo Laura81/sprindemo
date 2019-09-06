@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="worker" class="com.springdemo.beans.Worker" scope="prototype">
+     <!--   <constructor-arg name="tool" ref="tool"></constructor-arg> -->
+        <property name="tool" ref="tool"></property>
+        <property name="profession" value="Engineer"></property>
+        <property name="age" value="30"></property>
+    </bean>
+
+    <bean id="tool" class="com.springdemo.beans.Tool">
+        <property name="name" value="Anca"></property>
+        <property name="weight" value="50"></property>
+    </bean>
+
+</beans>
